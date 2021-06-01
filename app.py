@@ -7,7 +7,9 @@ app = Flask(__name__)
  
 @app.route("/")
 def hello():
-    return '<form action="/echo" method="GET"><input name="text"><input type="submit" value="Echo"></form>'
+    return '<form action="/echo" method="POST"><input name="text"><input type="submit" value="Echo"></form>'
+ 
+@app.route("/echo", methods=['POST'])
  
 @app.route("/echo")
 def echo():
