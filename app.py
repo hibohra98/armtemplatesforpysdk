@@ -7,7 +7,7 @@ app = Flask(__name__)
  
 @app.route("/")
 def hello():
-    return '<form action="/echo" method="POST"><input name="text"><input type="submit" value="Echo"></form>'
+ return render_template('echo.html')
  
 @app.route("/echo", methods=['POST'])
  
